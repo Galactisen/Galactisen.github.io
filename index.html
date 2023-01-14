@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="/logoListe.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/conthrax" rel="stylesheet">
+                
+
+
+    <link href="style.css" rel="stylesheet" />
+
+    <title>Galact'Isen</title>
+</head>
+
+
+<body>
+    <div id="DisplayBar"class="ContainerBar">
+        <div id="ContainerProgressBar" class="ContainerLoadingBar">
+            <div id="ProgressBar"class="Bar"></div>
+        </div>
+        <span class="status" id="statusBar">starting...</span>
+        <div id="confirmButton" class="confirmButton">
+            <span id="confirmButtonText"class="confirmButtonText">Entrer</span>
+        </div>
+    </div>
+
+    
+    <div class="headerContainer">
+        <div class="header">
+            <div class="HeaderLogo">
+                <span class="logoHeader">Galact'Isen</span>
+            </div>
+            <div class="HeaderSubject">
+                <span onclick="document.getElementById('accueuil').scrollIntoView({behavior: 'smooth'}, true);" class="Subject">Acceuil</span>
+                <span onclick="document.getElementById('event').scrollIntoView({behavior: 'smooth'}, true);"class="Subject">Events</span>
+                <span onclick="document.getElementById('team').scrollIntoView({behavior: 'smooth'}, true);"class="Subject">l'équipage</span>
+                <span onclick="document.getElementById('').scrollIntoView({behavior: 'smooth'}, true);"class="Subject">Sponsors</span>
+                <span onclick="document.getElementById('').scrollIntoView({behavior: 'smooth'}, true);"class="Subject">Contact</span>
+
+            </div>
+            <div onclick="ToggleHamburger()"class="Hamburger">
+                <div class="HamburgerLine"></div>
+                <div class="HamburgerLine"></div>
+                <div class="HamburgerLine"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="menu"class="MenuHamburger">
+        <div class="OptionContainer">
+            <div onclick="ToggleHamburger();document.getElementById('accueuil').scrollIntoView({behavior: 'smooth'}, true);" class="Option">
+                <span >Acceuil</span>
+            </div>
+            <div onclick="ToggleHamburger();document.getElementById('event').scrollIntoView({behavior: 'smooth'}, true);" class="Option">
+                <span>Events</span>
+            </div>
+            <div onclick="ToggleHamburger();document.getElementById('team').scrollIntoView({behavior: 'smooth'}, true);" class="Option">
+                <span>L'équipage</span>
+            </div>
+            <div onclick="ToggleHamburger();document.getElementById('').scrollIntoView({behavior: 'smooth'}, true);" class="Option">
+                <span>Sponsors</span>
+            </div>
+            <div onclick="ToggleHamburger();document.getElementById('').scrollIntoView({behavior: 'smooth'}, true);" class="Option">
+                <span>Contact</span>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="content-container">
+        <div id="scroll" class="scroll-container">
+            <div id="accueuil"class="presentation-container">
+                <div class="presentation">
+                    <h1 style="text-shadow: 0px 0px 10px rgba(0,0,0,0.7);">Bienvenue sur notre site, voyageur !</h1>
+                    <span style="text-shadow: 0px 0px 10px rgba(0,0,0,0.7);">Liste BDE ISEN 2023</span>
+                </div>
+                <div id="indication-scroll"class="scroll-message">
+                    <div style="width: 2px; height: 50px; background-color: white;"></div>
+                    <span style="font-weight: lighter;" >Scroll Down</span>
+                </div>
+            </div>
+            
+            <div id="event"class="event-container">
+                <div class="event">
+                    <span class="eventtext">Nos events</span>
+                </div>
+                <div class="event-content-container">
+                    <div class="event-content"></div>
+                    <div class="event-content"></div>
+                </div>
+            </div>
+            <div id="team"class="equipe-container">
+                <div class="event">
+                    <span class="eventtext">L'equipage</span>
+                </div>
+                <div class="equipe">
+                    <div class="equipe-elements"></div>
+                    <div class="equipe-elements"></div>
+                    <div class="equipe-elements"></div>
+                </div>
+            </div>
+            <div class="footer">
+                <span class="footer-text">Galact'Isen – Liste BDE – ISEN LILLE</span>
+                <span class="footer-text">Copyright © 2022 Galact'Isen</span>
+
+
+            </div>
+            
+
+            
+        </div>
+    </div>
+    
+    
+
+
+
+    <script src="three.js"></script>
+
+    <script type="module" src="./3Dmodel/GLTFLoader.js"></script>
+    <script type="module" src="./3Dtext/TextGeometry.js"></script>
+    <script type="module" src="./3Dtext/FontLoader.js"></script>
+    <script type="module" src="./Neon/EffectComposer.js"></script>
+    <script type="module" src="./Neon/RenderPass.js"></script>
+    <script type="module" src="./Neon/UnrealBloomPass.js"></script>
+    <script type="module" src="./Neon/lil-gui.module.min.js"></script>
+    <script type="module" src="./Neon/CopyShader.js"></script>
+    <script type="module" src="./Neon/ShaderPass.js"></script>
+    <script type="module" src="./Neon/Pass.js"></script>
+    <script type="module" src="./Neon/MaskPass.js"></script>
+    <script type="module" src="./Neon/LuminosityHighPassShader.js"></script>
+    <script type="module" src="./OrbitControls.js"></script>
+
+
+
+    
+
+
+
+
+
+    <script src="script-test.js"></script>
+
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
