@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/conthrax');
+
+@-webkit-keyframes animation {
+  0% { -webkit-opacity: 1; }
+  100% {
+     -webkit-opacity: 0 ; 
+    }
+}
+@keyframes animationWidth {
+  from { opacity: 1; }
+  to {
+     width: 1% ;
+     opacity: 0 ; 
+    }
+}
+
+
+
+
+.event-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.eventtext{
+  color: white;
+  font-size: 50px;
+  padding-bottom:10px ;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+.event-content-container{
+  width:80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+.event-content{
+  flex: 1;
+  min-width: 300px;
+  backdrop-filter: blur(5px);
+  max-width: 350px;
+  border-radius: 20px;
+  background-color: rgba(0, 5, 5, 0.8);
+
+  height: 400px;
+}
+.event{
+  width: 80%;
+  display: flex;
+  padding-top: 100px;
+  justify-content: center;
+  align-items: center;
+  
+  /* background-color: rgba(0, 5, 5, 0.8); */
+  border-radius:20px ;
+  text-align: center;
+}
+
+
+.contact-container{
+  position: fixed;
+  right: 0;
+  top:0;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  z-index: 600;
+  color: white;
+}
+.contact{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes down{
+	0% {position:relative; top:-10px; opacity: 0}
+	100% {position:relative; top:5px; opacity: 1}
+}
+
+.fleche{
+	animation: down 1s infinite linear alternate;
+  width: 100px;
+
+}
+.fleches{
+  width: 20px;
+  height: 100px;
+  background-color: white;
+
+}
+.pres{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 600;
+}
+
+@media screen and (pointer: coarse) {
+    @supports (-webkit-backdrop-filter: blur(1px)) and (not (overscroll-behavior-y: none))  {
+      html {
+        height: 100%;
+        overflow: hidden;
+      }
+      body {
+        margin: 0px;
+        max-height: 100%; /* or `height: calc(100% - 16px);` if body has default margin */
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      /* in this case to disable pinch-zoom, set `touch-action: pan-x pan-y;` on `body` instead of `html` */
+    }
+  }
+.scroll-container{
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.content-container{
+  position:absolute;
+  z-index: 500;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.presentation-container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.scroll-message{
+  position: absolute;
+  bottom: 30px;
+  z-index: 600;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.presentation{
+  width: 80%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+h1{
+  color: white
+}
+.Logo-container{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000D15;
+  border-radius: 20px;
+  background-color: rgba(0, 5, 5, 0.8);
+  box-shadow: 0px 0px 10px 1px rgba(0, 13, 21, 0.5);
+}
+.logo{
+  width: 250px;
+  height: 250px;
+ 
+}
+.equipe-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+}
+.equipe{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.equipe-elements{
+  width: 300px;
+  height: 350px;
+  display: flex;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 5, 5, 0.8);
+  box-shadow: 0px 0px 10px 1px rgba(0, 13, 21, 0.8);
+  border-radius: 20px;
+  flex-direction: column;
+  gap: 5px;
+
+}
+
+
+.footer{
+  width: 100%;
+  display: flex;
+  margin-top: 200px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom:100px ;
+  flex-direction: column;
+}
+.footer-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 80%;
+  text-align: center;
+  font-size: 12px;
+  
+}
+.img{
+  width: 200px;
+}
+ ::-webkit-scrollbar {
+    display: none;
+  } 
+  @font-face {
+      font-family: 'nasalizationregular';
+      src: url('font/nasalization-rg-webfont.woff2') format('woff2'),
+           url('font/nasalization-rg-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+      body{
+          margin: 0;
+          touch-action: none;
+          overflow-x: hidden;
+          /* font-family: 'Space Grotesk', sans-serif; */
+          /* font-family: 'nasalizationregular'; */
+          font-family: 'Conthrax', sans-serif;
+                                                
+          background-color: #000D15;
+          overflow: hidden;
+          overscroll-behavior-y: none;
+          -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+
+
+      }
+      canvas{
+          display: block;
+          -webkit-overflow-scrolling: touch;
+          position: relative;
+
+      }
+      .container{
+          position: absolute;
+          width: 100%;
+          display: flex;
+          height: 1100px;
+          justify-content: center;
+          z-index: -10;
+      }
+  
+        
+  
+      .test-container{
+          position: fixed;
+          width: 100px;
+          height: 100%;
+          z-index: 10;
+          display: flex;
+          bottom: 0;
+          align-items: flex-end;
+      }
+     
+     
+  
+  
+  
+      
+      .headerContainer{
+          position: absolute;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height:125px;
+          z-index: 550;
+          color: white;
+          justify-content: center;
+          text-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+
+      }
+      .header{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 80%;
+      }
+      .HeaderSubject{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          gap:40px
+      }
+      .ContainerBar{
+          background :#000D15;
+          top:0;
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          z-index: 1000;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          box-sizing: border-box;
+          padding: 100px;
+          transition: all 1s ease-in-out;
+      }
+      .ContainerLoadingBar{
+          width: 100%;
+          height: 20px;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          padding-left: 2px;
+          padding-right: 2px;
+          border: solid 3px lightblue;
+          box-shadow: 0px 0px 10px 1px lightblue;
+          opacity: 1;
+          transition: all 0.75s ease-in-out;
+      }
+      .Bar{
+          width: 0px;
+          height: 15px;
+          background-color: lightblue;
+          border-radius: 20px;
+          transition: all 0.5s ease-in-out;
+      }
+
+      .logoHeader{
+        font-size: 1.4rem;
+        cursor: default;
+      }
+      .confirmButton{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 0px;
+        height: 0px;
+        background-color: lightblue;
+        border-radius: 100% ;
+        opacity: 0;
+        transition: opacity 1s ease-in-out, width 3s ease-in-out, height 3s ease-in-out, box-shadow 1s ease-in-out ;
+        box-shadow: 0px 0px 20px 1px lightblue;
+
+      }
+      .confirmButton:hover{
+        cursor: pointer;
+        box-shadow: 0px 0px 50px 5px lightblue;
+        font-size: 1.1rem;
+      }
+      
+      .confirmButtonText{
+        color: black;
+        margin-top: -3px;
+        opacity: 0;
+        font-weight: bold;
+        letter-spacing: 10px;
+        transition: opacity 5s ease-in-out, font-size 1s ease-in-out, letter-spacing 2s ease-in-out;
+      }
+
+      .Subject{
+          background-color: white;
+          background-size: 200% 100%;
+          background-position: -100%;
+          display: inline-block;
+          position: relative;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: all 0.3s ease-in-out;
+          font-size: 0.8rem;
+          cursor: pointer;
+      }
+  
+      .Subject::before{
+          content: '';
+          border-radius: 20px;
+          background: white;
+          display: block;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 0;
+          height: 1px;
+          transition: all 0.3s ease-in-out;
+      }
+  
+      .Subject:hover{
+          background-position: 0;
+      }
+      .Subject:hover::before{
+          width: 100%;
+      }
+      .status{
+          color: white;
+          opacity: 1;
+          transition: all 1s ease-in-out;
+      }
+  
+      .test{
+          color: white;
+          padding-left: 40px;
+          background: none;
+          font-size: 4rem;
+      }
+  
+      #label2{
+          max-width: 70vw ;
+          text-align: center;
+      }
+  
+  
+  
+      .label {
+          margin-top: 2px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+      }
+     
+      
+      .text{
+          color:white;
+          font-size: 1.5rem;
+      }
+  
+      .Hamburger{
+          width: 30px;
+          height: 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap:7px;
+          display: none;
+  
+      }
+      .HamburgerLine{
+          width: 100%;
+          height: 2.5px;
+          background-color: white;
+          border-radius: 20px;
+      }
+  
+      @media (max-width: 769px) {
+          .header{
+              font-size: 10px;
+              padding: 0 10%;
+          }
+          .HeaderSubject{
+              display: none;
+          }
+          .Hamburger{
+              display: flex;
+          }
+          .contact-container{
+              display: none;
+          }
+      }
+
+     
+
+      .MenuHamburger{
+        position: fixed;
+        z-index: 540;
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        opacity: 0;
+        transition-property: opacity, top;
+        transition-duration: 0.3s, 0.5s;
+        padding-top: 100px;
+
+        backdrop-filter: blur(5px);
+
+      }
+
+      .OptionContainer{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 10%;
+        gap: 25px;
+        padding-right: 10%;
+      }
+      a{
+        text-decoration: none;
+        color: white;
+      }
+      .Aoption{
+        display: flex;
+        align-items: center;
+        width: 80%;
+        justify-content: center;
+        gap:20px
+      }
+      .Option{
+        width: 80%;
+        min-height: 30px;
+        height: calc((100vh - 300px) / 5);
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 5, 5, 0.8);
+        box-shadow: 0px 0px 10px 1px rgba(0, 13, 21, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* box-shadow: 0px 0px 5px 1px lightblue; */
+        color: white;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      #blur{
+        height: 100%;
+        top : 0;
+        width: 100%;
+        position: fixed;
+        z-index: 25;
+        backdrop-filter: blur(5px);
+        display: none;
+      }
+
+      .c{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 500;
+        top : 0;
+        /* background-color: lightblue; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+      }
+      .tp{
+        
+      }
+      /* .bc{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 2000;
+        top : 0;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+      } */
+      

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div id="DisplayBar"class="ContainerBar">
+        <div class="ContainerLoadingBar">
+            <div id="ProgressBar"class="Bar"></div>
+        </div>
+        <span class="status" id="statusBar">starting...</span>
+    </div>
+
+    <div class="headerContainer">
+        <div class="header">
+            <div class="HeaderLogo">
+                <span>HelloWorld</span>
+            </div>
+            <div class="HeaderSubject">
+                <span onclick="window.scrollTo({top: 0,behavior: 'smooth'});" class="Subject">Acceuil</span>
+                <span onclick="window.scrollTo({top: 0.25*window.innerHeight,behavior: 'smooth'});"class="Subject">Events</span>
+                <span onclick="window.scrollTo({top: 0.5*window.innerHeight,behavior: 'smooth'});"class="Subject">l'équipe</span>
+                <span onclick="window.scrollTo({top: 0.75*window.innerHeight,behavior: 'smooth'});"class="Subject">Sponsors</span>
+                <span onclick="window.scrollTo({top: window.innerHeight,behavior: 'smooth'});"class="Subject">Contact</span>
+
+            </div>
+            <div onclick="ToggleHamburger()"class="Hamburger">
+                <div class="HamburgerLine"></div>
+                <div class="HamburgerLine"></div>
+                <div class="HamburgerLine"></div>
+            </div>
+        </div>
+    </div>
+    <div id="menu"class="MenuHamburger">
+        <div class="OptionContainer">
+            <div onclick="window.scrollTo({top: 0,behavior: 'smooth'});ToggleHamburger();" class="Option">
+                <span >Acceuil</span>
+            </div>
+            <div onclick="window.scrollTo({top:0.25*window.innerHeight,behavior: 'smooth'}); ToggleHamburger();" class="Option">
+                <span>Events</span>
+            </div>
+            <div onclick="window.scrollTo({top: 0.5*window.innerHeight,behavior: 'smooth'});ToggleHamburger();" class="Option">
+                <span>L'équipe</span>
+            </div>
+            <div onclick="window.scrollTo({top: 0.75*window.innerHeight,behavior: 'smooth'});ToggleHamburger();" class="Option">
+                <span>Sponsors</span>
+            </div>
+            <div onclick="window.scrollTo({top: window.innerHeight,behavior: 'smooth'});ToggleHamburger();" class="Option">
+                <span>Contact</span>
+            </div>
+        </div>
+    </div>
+    <div id="blur"></div>
+    
+    <div id="Acceuil" class="label">
+        <div id="label2">
+            <h1 id="test" class="text">Bienvenue !</h1>
+        </div>
+    </div>
+
+    <div id="Events" class="label">
+        <div id="label2">
+            <h1 id="test4" class="text">Bienvenue !</h1>
+        </div>
+    </div>
+
+    <div id="Equipe" class="label">
+        <div id="label2">
+            <h1 id="test2" class="text">Bienvenue !</h1>
+        </div>
+    </div>
+
+    <div id="Sponsors" class="label">
+        <div id="label2">
+            <h1 id="test5" class="text">Bienvenue !</h1>
+        </div>
+    </div>
+
+    <div id="Contacts" class="label">
+        <div id="label2">
+            <h1 id="test3" class="text">Bienvenue !</h1>
+        </div>
+    </div>
+   
+
+
+
+    <script src="script-test.js"></script>
+    <script src="three.js"></script>
+    <script src="three.min.js"></script>
+    <script type="module" src="./3Dmodel/GLTFLoader.js"></script>
+    <script type="module" src="./3Dtext/TextGeometry.js"></script>
+    <script type="module" src="./3Dtext/FontLoader.js"></script>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>

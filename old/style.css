@@ -1,0 +1,240 @@
+::-webkit-scrollbar {
+    display: none;
+  } 
+  @font-face {
+      font-family: 'nasalizationregular';
+      src: url('font/nasalization-rg-webfont.woff2') format('woff2'),
+           url('font/nasalization-rg-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+      body{
+          margin: 0;
+          overflow-x: hidden;
+          /* font-family: 'Space Grotesk', sans-serif; */
+          font-family: 'nasalizationregular';
+      }
+      canvas{
+          display: block;
+          position: fixed;
+      }
+      .container{
+          position: absolute;
+          width: 100%;
+          display: flex;
+          height: 1100px;
+          justify-content: center;
+          z-index: -10;
+      }
+  
+        
+  
+      .test-container{
+          position: fixed;
+          width: 100px;
+          height: 100%;
+          z-index: 10;
+          display: flex;
+          bottom: 0;
+          align-items: flex-end;
+      }
+     
+     
+  
+  
+  
+      
+      .headerContainer{
+          position: fixed;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height:100px;
+          z-index: 100;
+          color: white;
+      }
+      .header{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 80px;
+          width: 100%;
+      }
+      .HeaderSubject{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          gap:40px
+      }
+      .ContainerBar{
+          background-image: url("./BGtextures/stars.jpg");
+          top:0;
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          z-index: 10000;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          box-sizing: border-box;
+          padding: 100px;
+      }
+      .ContainerLoadingBar{
+          width: 100%;
+          height: 20px;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          padding-left: 2px;
+          padding-right: 2px;
+          border: solid 3px white;
+      }
+      .Bar{
+          width: 0px;
+          height: 15px;
+          background-color: white;
+          border-radius: 20px;
+      }
+      .Subject{
+          background-color: white;
+          background-size: 200% 100%;
+          background-position: -100%;
+          display: inline-block;
+          position: relative;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: all 0.3s ease-in-out;
+          font-size: 0.75rem;
+      }
+  
+      .Subject::before{
+          content: '';
+          border-radius: 20px;
+          background: white;
+          display: block;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 0;
+          height: 1px;
+          transition: all 0.3s ease-in-out;
+      }
+  
+      .Subject:hover{
+          background-position: 0;
+      }
+      .Subject:hover::before{
+          width: 100%;
+      }
+      .status{
+          color: white;
+      }
+  
+      .test{
+          color: white;
+          padding-left: 40px;
+          background: none;
+          font-size: 4rem;
+      }
+  
+      #label2{
+          max-width: 70vw ;
+          text-align: center;
+      }
+  
+  
+  
+      .label {
+          margin-top: 2px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+      }
+     
+      
+      .text{
+          color:white;
+          font-size: 1.5rem;
+      }
+  
+      .Hamburger{
+          width: 30px;
+          height: 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap:7px;
+          display: none;
+  
+      }
+      .HamburgerLine{
+          width: 100%;
+          height: 2.5px;
+          background-color: white;
+          border-radius: 20px;
+      }
+  
+      @media (max-width: 769px) {
+          .header{
+              font-size: 10px;
+              padding: 0 10%;
+          }
+          .HeaderSubject{
+              display: none;
+          }
+          .Hamburger{
+              display: flex;
+          }
+      }
+
+     
+
+      .MenuHamburger{
+        position: fixed;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        opacity: 0;
+        transition-property: opacity, top;
+        transition-duration: 0.3s, 0.5s;
+        padding-top: 100px;
+      }
+
+      .OptionContainer{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding-left:20px;
+        padding-right: 20px;
+      }
+      .Option{
+        width: calc(100vw - 40px);
+        min-height: 30px;
+        height: calc((100vh - 300px) / 5);
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid white;
+        color: white;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+      }
+      .Option:hover{
+        background-color: white;
+        color: black;
+        letter-spacing: .2rem;
+      }
+      #blur{
+        height: 100%;
+        top : 0;
+        width: 100%;
+        position: fixed;
+        z-index: 25;
+        backdrop-filter: blur(5px);
+        display: none;
+      }
