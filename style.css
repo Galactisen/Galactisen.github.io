@@ -265,27 +265,48 @@ h1{
   color: white;
   font-size: 25px;
   z-index: 100;
-  top: 20px;
+  margin-top: 20px;
   width: 100%;
   text-align: center;
 
 }
 .equipe-elements{
   width: 300px;
-  /* height: 350px; */
   display: flex;
   backdrop-filter: blur(5px);
   background-color: rgba(0, 5, 5, 0.8);
   box-shadow: 0px 0px 10px 1px rgba(0, 13, 21, 0.8);
   border-radius: 20px;
-  flex-direction: column;
-  gap: 20px;
   margin-bottom: 20px;
-  justify-content: flex-end;
   overflow: hidden;
-
-
+  color: white;
+  background-size: contain ;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
+
+.equipe-elements:nth-child(1){
+  background-image: url('photos/Bureau.jpg');
+}
+.equipe-elements:nth-child(2){
+  background-image: url('photos/Pole com.jpg');
+}
+.equipe-elements:nth-child(3){
+  background-image: url('photos/Pole event.jpg');
+}
+.equipe-elements:nth-child(4){
+  background-image: url('photos/respos.jpg');
+}
+.equipe-elements:nth-child(5){
+  background-image: url('photos/respos1.jpg');
+}
+.equipe-elements:nth-child(6){
+  background-image: url('photos/aideCampagne.jpg');
+}
+
 
 
 
@@ -603,7 +624,7 @@ h1{
         transition-property: opacity, top;
         transition-duration: 0.3s, 0.5s;
         padding-top: 100px;
-
+        -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(5px);
 
       }
