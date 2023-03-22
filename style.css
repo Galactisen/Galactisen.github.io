@@ -415,6 +415,22 @@ h1{
           align-items: center;
           gap:40px
       }
+      .ContainerTimer{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background :#000D15;
+          position: fixed;
+          z-index: 1100;
+          height: 100%;
+          width: 100%;
+          color: white;
+      }
+
+      .BarImage{
+        width: 200px;
+        margin-bottom: 50px;
+      }
       .ContainerBar{
           background :#000D15;
           top:0;
@@ -428,7 +444,7 @@ h1{
           align-items: center;
           box-sizing: border-box;
           padding: 100px;
-          transition: all 1s ease-in-out;
+          /* transition: all 1s ease-in-out; */
       }
       .ContainerLoadingBar{
           width: 100%;

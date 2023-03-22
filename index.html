@@ -19,7 +19,11 @@
 
 
 <body>
+    <div id="clock"class="ContainerTimer">
+        <span id="Timer" class="Timer">00:00:00</span>
+    </div>
     <div id="DisplayBar"class="ContainerBar">
+        <img id="DisplayBarImage" class="BarImage" src="/src/logoListe.png" alt="logo">
         <div id="ContainerProgressBar" class="ContainerLoadingBar">
             <div id="ProgressBar"class="Bar"></div>
         </div>
@@ -209,10 +213,10 @@
 
 
 
-
-    <script src="script-test.js"></script>
     <script src="/GSAP/gsap.min.js"></script>
     <script src="/GSAP/ScrollTrigger.js"></script>
+    <script src="script-test.js"></script>
+   
 
 
     <script type="module" src="./script.js"></script>

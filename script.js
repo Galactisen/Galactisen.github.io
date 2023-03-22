@@ -80,8 +80,10 @@ manager.onLoad = function ( ) {
         // status.style.opacity = "0";
         // ContainerBar.style.opacity = '0';
         ContainerBar.style.width = '1%';
-        status.style.webkitAnimation = "animation 1s ease-in-out forwards";
-        ContainerBar.style.webkitAnimation = "animation 1s ease-in-out forwards";
+        // status.style.webkitAnimation = "animation 1s ease-in-out forwards";
+        // ContainerBar.style.webkitAnimation = "animation 1s ease-in-out forwards";
+        gsap.to(status, {opacity:0, duration: 1});
+        gsap.to(ContainerBar, {opacity:0, duration: 1});
 
         modelLoaded = true;
         Animation();
@@ -93,7 +95,11 @@ function Animation(){
     scroll.addEventListener('scroll', updateScrollPos );
     StartFadeOut = new Date().getTime();
     transition = true;
-    DisplayBar.style.webkitAnimation = "animation 1s ease-in-out forwards";
+    // DisplayBar.style.webkitAnimation = "animation 1s ease-in-out forwards";
+    gsap.to(DisplayBar, {opacity:0, duration: 1});
+    gsap.to(DisplayBar, {display:"none", duration: 0, delay: 1});
+
+
     gsap.registerPlugin(ScrollTrigger);
     gsap.from(".header", {scrollTrigger: ".header", opacity:0, duration: 1, y: -10, delay: 0.25});
     gsap.from(".presentation", {scrollTrigger: ".presentation", opacity:0, duration: 1,x:-20, delay: 0.25});
@@ -118,14 +124,14 @@ function animate() {
     }
     renderer.render( scene, camera );
     composer.render();
-    if (transition){
-        if (!FadeOut){
-            if (new Date().getTime() - StartFadeOut > 2000){
-                DisplayBar.style.display = "none";
-                FadeOut = true;
-            }
-        }
-    } 
+    // if (transition){
+    //     if (!FadeOut){
+    //         if (new Date().getTime() - StartFadeOut > 2000){
+    //             DisplayBar.style.display = "none";
+    //             FadeOut = true;
+    //         }
+    //     }
+    // } 
 }
 let OpaciteScrollDown = document.getElementById('indication-scroll');
 let X = 0;

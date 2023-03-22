@@ -24,7 +24,7 @@ window.addEventListener('resize', onWindowResize, false);
 
 function ToggleHamburger(){
 
-    if (menu.style.top == "25px"){
+    if (menu.style.top == "0px"){
         menu.style.top = "-100%";
         menu.style.opacity = "0";
         gsap.to("#close", { opacity: 0,duration: 0.25 });
@@ -43,7 +43,7 @@ function ToggleHamburger(){
         gsap.to("#close", { display: "flex",duration: 0, delay: 0.25 });
         gsap.to("#close", { opacity: 1, duration: 0.25, delay: 0.30 });
 
-        menu.style.top = "25px";
+        menu.style.top = "0px";
         menu.style.opacity = "1";
     }
 
@@ -53,3 +53,28 @@ if (window.GestureEvent && !('touchAction' in document.body.style)) {
     document.body.addEventListener('gesturestart', (e)=>{e.preventDefault()}, {passive: false, capture:true});
   }
 
+
+  function currentTime() {
+    var now = new Date();
+    var endDate = new Date(Date.UTC(2023,4,3)); // 2017-05-29T00:00:00Z
+    var diff = endDate - now; 
+
+    var hours   = Math.floor(diff / 3.6e6);
+    var minutes = Math.floor((diff % 3.6e6) / 6e4);
+    var seconds = Math.floor((diff % 6e4) / 1000);
+
+    
+    let time =  hours+":" + minutes+":"+ seconds;
+    document.getElementById("Timer").innerText = time; 
+    time = "0:0:0"
+    if(time != "0:0:0"){ 
+    let t = setTimeout(function(){ currentTime() }, 1000);
+    }
+    else{
+        gsap.to("#clock", { display:"none",duration: 0, delay: 0});
+
+    }
+  }
+  
+  clock = document.getElementById("clock");
+  currentTime();
