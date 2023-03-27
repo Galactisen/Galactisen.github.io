@@ -56,18 +56,28 @@ if (window.GestureEvent && !('touchAction' in document.body.style)) {
 
   function currentTime() {
     var now = new Date();
-    var endDate = new Date(Date.UTC(2023,4,3)); // 2017-05-29T00:00:00Z
-    var diff = endDate - now; 
+    var date = new Date("04/03/2023");   
 
-    var hours   = Math.floor(diff / 3.6e6);
-    var minutes = Math.floor((diff % 3.6e6) / 6e4);
-    var seconds = Math.floor((diff % 6e4) / 1000);
+    var delta = Math.abs(date - now) / 1000;
+
+    var days = Math.floor(delta / 86400);
+    delta -= days * 86400;
+
+    var hours = Math.floor(delta / 3600) % 24;
+    delta -= hours * 3600;
+
+    var minutes = Math.floor(delta / 60) % 60;
+    delta -= minutes * 60;
+
+    var seconds = delta % 60;
+
+    time = Math.floor(days) + ":" + Math.floor(hours) + ":" + Math.floor(minutes) + ":" + Math.floor(seconds);
 
     
-    let time =  hours+":" + minutes+":"+ seconds;
+    
     document.getElementById("Timer").innerText = time; 
     //time = "0:0:0"
-    if(time != "0:0:0"){ 
+    if(time != "0:0:0:0"){ 
     let t = setTimeout(function(){ currentTime() }, 1000);
     }
     else{
@@ -75,6 +85,7 @@ if (window.GestureEvent && !('touchAction' in document.body.style)) {
 
     }
   }
+
   
   clock = document.getElementById("clock");
   currentTime();
