@@ -83,7 +83,8 @@ manager.onLoad = function ( ) {
         // status.style.webkitAnimation = "animation 1s ease-in-out forwards";
         // ContainerBar.style.webkitAnimation = "animation 1s ease-in-out forwards";
         gsap.to(status, {opacity:0, duration: 1});
-        gsap.to(ContainerBar, {opacity:0, duration: 1});
+        gsap.to(ContainerBar, {opacity:0, filter: "opacity(0.3)", duration: 1});
+
 
         modelLoaded = true;
         Animation();

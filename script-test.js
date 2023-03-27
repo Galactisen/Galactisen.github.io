@@ -66,7 +66,7 @@ if (window.GestureEvent && !('touchAction' in document.body.style)) {
     
     let time =  hours+":" + minutes+":"+ seconds;
     document.getElementById("Timer").innerText = time; 
-    time = "0:0:0"
+    //time = "0:0:0"
     if(time != "0:0:0"){ 
     let t = setTimeout(function(){ currentTime() }, 1000);
     }
